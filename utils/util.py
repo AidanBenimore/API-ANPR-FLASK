@@ -7,20 +7,26 @@ reader = easyocr.Reader(['id'], gpu=False)
 # Mapping dictionaries for character conversion
 dict_char_to_int = {'O': '0',
                     'I': '1',
+                    'Z': '2',
                     'J': '3',
                     'L': '4',
                     'G': '6',
                     'S': '5',
-                    'B': '8'}
+                    'B': '8',
+                    'Y': '7',
+                    '/': '7'}
 
 dict_int_to_char = {'0': 'Q',
                     'O': 'Q',
                     '1': 'I',
+                    '2': 'Z',
                     '3': 'J',
                     '4': 'A',
                     '6': 'G',
                     '5': 'S',
-                    '8': 'B'}
+                    '8': 'B',
+                    '7': 'Y',
+                    '/': 'Z'}
 
 
 def write_csv(results, output_path):
