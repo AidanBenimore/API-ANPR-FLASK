@@ -154,7 +154,7 @@ def main(videopath):
                     # crop license plate
                     license_plate_crop = frame[int(y1):int(y2), int(x1): int(x2), :]
                     license_plate_crop = cv2.resize(license_plate_crop, (400, 120))
-                    license_plate_crop = crop_image(license_plate_crop, 45)
+                    # license_plate_crop = crop_image(license_plate_crop, 45)
 
                     # process license plate
                     license_plate_crop_gray = cv2.cvtColor(license_plate_crop, cv2.COLOR_BGR2GRAY)
