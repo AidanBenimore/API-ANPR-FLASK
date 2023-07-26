@@ -2,7 +2,7 @@ import string
 import easyocr
 
 # Initialize the OCR reader
-reader = easyocr.Reader(['en'], gpu=False)
+reader = easyocr.Reader(['id'], gpu=False)
 
 # Mapping dictionaries for character conversion
 dict_char_to_int = {'O': '0',
@@ -128,7 +128,7 @@ def read_license_plate(license_plate_crop):
         if license_complies_format(text):
             return format_license(text), score
 
-    return "", ""
+    return 0, 0
 
 
 def get_car(license_plate, vehicle_track_ids):
